@@ -533,7 +533,7 @@ router.get('/', async (req, res) => {
   // }
 
   // const questionSubject = query.subject;
-  const questionSubject = "Albert Einstein";
+  const questionSubject = "Star Trek Charecters";
   const question = `Create a response about ${questionSubject} using the following responses as examples:\n${JSON.stringify(EXAMPLE_TOSSUPS)}`;
 
   const url = 'https://api.forge-ml.com/q/salnad/tossups';
@@ -551,6 +551,7 @@ router.get('/', async (req, res) => {
     const response = await axios.post(url, data, { headers: headers });
     tossups.push(response.data)
   }
+
   console.log(tossups);
   res.header('Access-Control-Allow-Origin', '*');
   res.json({ tossups });
