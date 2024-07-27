@@ -1,6 +1,7 @@
 import { MongoClient } from 'mongodb';
 
-const uri = `mongodb+srv://${process.env.MONGODB_USERNAME || 'geoffreywu42'}:${process.env.MONGODB_PASSWORD || 'password'}@qbreader.0i7oej9.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = `mongodb+srv://${process.env.MONGODB_USERNAME || 'geoffreywu42'}:${process.env.MONGODB_PASSWORD || 'password'}@qbreader.0i7oej9.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.MONGODB_USERNAME || 'geoffreywu42'}:${process.env.MONGODB_PASSWORD || 'password'}@cluters0.wuygmwo.mongodb.net/?retryWrites=true&w=majority&appName=Cluters0`
 const client = new MongoClient(uri);
 
 async function connectToDatabase (log = false) {
