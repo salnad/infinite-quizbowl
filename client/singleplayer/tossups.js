@@ -577,6 +577,20 @@ document.getElementById('answer-form').addEventListener('submit', function (even
   giveAnswer(answer);
 });
 
+document.getElementById('answer-form2').addEventListener('submit', function (event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const answer2 = document.getElementById('answer-input2').value;
+
+  document.getElementById('answer-input2').value = '';
+  document.getElementById('answer-input2').blur();
+  document.getElementById('answer-input2').placeholder = 'Enter theme, eg. Startrek,etc';
+  document.getElementById('answer-input-group2').classList.add('d-none');
+
+ // givePrompt(answer2);
+});
+
 document.getElementById('buzz').addEventListener('click', function () {
   this.blur();
 
@@ -596,6 +610,14 @@ document.getElementById('buzz').addEventListener('click', function () {
     document.getElementById('answer-input').focus();
     this.disabled = true;
   }
+});
+
+document.getElementById('buzz2').addEventListener('click', function () {
+  this.blur();
+  document.getElementById('answer-input-group2').classList.remove('d-none');
+  document.getElementById('answer-input2').focus();
+  this.disabled = true;
+ 
 });
 
 document.getElementById('category-modal').addEventListener('hidden.bs.modal', function () {

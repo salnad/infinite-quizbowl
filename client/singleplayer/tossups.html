@@ -184,6 +184,8 @@
                     <button class="mb-2 btn btn-primary" id="pause" data-bs-placement="top" data-bs-toggle="tooltip" type="button"
                         title="Shortcut: p key" disabled>Pause</button>
                     <button class="mb-2 btn btn-danger d-lg-none" id="toggle-options" type="button" disabled>Options</button>
+                   
+                   
                     <button class="mb-2 btn btn-primary float-end" id="buzz" data-bs-placement="top" data-bs-toggle="tooltip"
                         type="button" title="Shortcut: spacebar" disabled>Buzz</button>
                     <form id="answer-form">
@@ -193,6 +195,16 @@
                             <button class="btn btn-success" id="answer-submit" type="submit">Submit</button>
                         </div>
                     </form>
+
+                    <button class="mb-2 btn btn-primary float-end" id="buzz2" data-bs-placement="top" data-bs-toggle="tooltip"
+                    type="button" title="Shortcut: spacebar" >Prompt</button>
+                <form id="answer-form2">
+                        <!-- User enters answer for prompt here -->
+                        <div class="input-group d-none my-2" id="answer-input-group2">
+                            <input class="form-control" id="answer-input2" type="text" placeholder="Enter theme, eg. Startrek,etc.">
+                            <button class="btn btn-success" id="answer-submit2" type="submit">Prompt</button>
+                        </div>
+                </form>
                 </div>
                 <div class="d-flex justify-content-between">
                     <span id="statline">0/0/0 with 0 tossups seen (0 pts, celerity: 0)</span>
